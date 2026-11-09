@@ -1,0 +1,35 @@
+# ---- 运行产物与真实项目数据：一律不入库 ----
+# 输入目录里是真实项目的 60 个 RTF（含试验数据），产物 docx/清单同理
+output_rtf_*/
+*.rtf
+*.docx
+*_manifest.json
+合并单元格清单.csv
+~$*
+
+# ---- 打包产物（>100MB，走 Release 附件，不进 git）----
+dist/
+build/
+*.log
+
+# ---- 归档里的旧产物（历史源码 archive/*.py 保留）----
+archive/旧产物_*/
+
+# ---- SAS 原宏与宏时代遗留（公司资产，不随仓库分发）----
+*.sas
+*.vbs
+TimesFont.txt
+archive/SAS原宏与遗留/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
